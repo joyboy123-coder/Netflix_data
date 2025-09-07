@@ -1,6 +1,10 @@
 ﻿@"
 # 🎬📊 Netflix Data Pipeline - ETL & Analytics Project 🚀✨
 
+
+![Netflix-Data Thumbnail](images/thumbnail/thumbnail_image.png)
+
+
 ## 📋🎯 Project Overview
 
 This project is a **complete data engineering pipeline** that extracts, transforms, and loads Netflix movie/TV show data into a modern data warehouse. It's designed as an **incremental data pipeline** that can handle ongoing data updates efficiently! 🎉
