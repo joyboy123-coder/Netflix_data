@@ -1,9 +1,14 @@
-﻿@"
-# 🎬📊 Netflix Data Pipeline - ETL & Analytics Project 🚀✨
+﻿# 🎬📊 Netflix Data Pipeline - ETL & Analytics Project 🚀✨
 
+<p align="center">
+  <img src="images/thumbnail/thumbnail_image.png" alt="Clean Bites Thumbnail" style="width:100%; max-width:700px; border-radius: 8px;"/>
+</p>
 
-![Netflix-Data Thumbnail](images/thumbnail/thumbnail_image.png)
+<p align="center">
+  <em>Incremental ETL magic — fake Netflix data 𝗡, pandas 🐼 + Snowflake ❄️, updated row by row!</em>
+</p>
 
+---
 
 ## 📋🎯 Project Overview
 
@@ -185,17 +190,6 @@ ORDER BY IMDB_SCORE DESC;
    - 🔍📊 Review data quality issues
    - ⚙️✅ Check test configurations
 
-## 🤝👥 Contributing
-
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch
-3. ✏️ Make your changes
-4. 🧪 Add tests if applicable
-5. 📤 Submit a pull request
-
-## 📄📜 License
-
-This project is licensed under the MIT License.
 
 ## 🎉🙏 Acknowledgments
 
@@ -205,6 +199,3 @@ This project is licensed under the MIT License.
 - 🐍🐍 Python community for amazing libraries
 
 ---
-
-**Happy Data Engineering! 🚀📊🎉✨**
-"@ | Out-File -FilePath "README.md" -Encoding UTF8
