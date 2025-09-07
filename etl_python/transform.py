@@ -120,6 +120,7 @@ def transform(df: pd.DataFrame) -> pd.DataFrame:
         df['IMDB_SCORE'] = pd.to_numeric(df['IMDB_SCORE'], errors='coerce')
 
         df['ADDED_DATE'] = pd.to_datetime(df['ADDED_DATE'], errors='coerce')
+        df['ADDED_DATE'] = df['ADDED_DATE'].dt.date
 
         logging.info("Finished TRANSFORM process successfully")
         return df

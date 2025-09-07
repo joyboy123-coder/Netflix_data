@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: netflix_incremental
+    description: "Cleaned Netflix dataset containing metadata about movies and TV shows."
+    columns:
+      - name: MOVIE_ID
+        description: "Unique identifier for each movie or TV show."
+        tests:
+          - not_null
+          - unique
+
+      - name: TITLE
+        description: "Title of the movie or TV show."
+        tests:
+          - not_null
+
+      - name: TYPE
+        description: "Whether the entry is a Movie or TV Show."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Movie', 'TV Show']
+
+      - name: RELEASE_YEAR
+        description: "Year the movie or TV show was originally released."
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 1960
+              max_value: 2023
+
+
+      - name: GENRE
+        description: "Primary genre classification of the movie or TV show."
+        tests:
+          - not_null
+
+      - name: COUNTRY
+        description: "Country of origin or primary production."
+        tests:
+          - not_null
+
+      - name: RATING
+        description: "Viewer rating (e.g., PG, R, TV-MA)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['TV-PG', 'TV-MA', 'R', 'PG-13', 'TV-14', 'PG', 'TV-Y7', 'G']
+
+      - name: IMDB_SCORE
+        description: "IMDb score of the movie or TV show (0.0–10.0)."
+        tests:
+          - not_null
+          - test_rating_nonempty
+
+      - name: ADDED_DATE
+        description: "Date the movie or TV show was added to the dataset."
+        tests:
+          - not_null
+
+      - name: DURATION_MINUTES
+        description: "Total duration in minutes (for TV Shows, represents per-episode or total runtime depending on data source)."
+        tests:
+          - not_null
+          - test_duration_positive
